@@ -1,0 +1,498 @@
+
+/* =====================================
+   1. GENERAL STYLES
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #243047;
+    background-color: #f5f7fb;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+
+/* =====================================
+   2. BUTTONS
+===================================== */
+
+.button-link {
+    display: inline-block;
+    background-color: #1276ad;
+    color: white;
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-link:hover {
+    background-color: #095783;
+}
+
+.button-link.primary {
+    background-color: #1276ad;
+    color: white;
+}
+
+.button-link.primary:hover {
+    background-color: #095783;
+}
+
+.button-link.secondary {
+    background-color: white;
+    color: #1276ad;
+    border: 1px solid #1276ad;
+}
+
+.button-link.secondary:hover {
+    background-color: #dceefa;
+}
+
+.menu-button {
+    display: none;
+    background-color: #1276ad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   3. HEADER AND NAVIGATION
+===================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid #e0e5ee;
+    box-shadow: 0 2px 8px #00000010;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4.5rem;
+    position: relative;
+}
+
+.brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #17213d;
+    text-decoration: none;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #243047;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    color: #1276ad;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+
+/* =====================================
+   4. HERO SECTION
+===================================== */
+
+.hero {
+    width: 100%;
+    padding: 5rem 0;
+}
+
+.hero-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-copy,
+.dashboard-preview {
+    flex: 1 1 30rem;
+    min-width: 0;
+}
+
+.eyebrow {
+    color: #1276ad;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero-copy h1 {
+    font-size: 3rem;
+    color: #17213d;
+    margin-bottom: 1.25rem;
+}
+
+.hero-copy p {
+    font-size: 1.1rem;
+    color: #52627a;
+    margin-bottom: 1.5rem;
+}
+
+.hero-copy .eyebrow {
+    color: #1276ad;
+    font-size: 1rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.dashboard-preview {
+    background-color: #17213d;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px #17213d25;
+}
+
+.preview-label {
+    display: block;
+    color: #93c5fd;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.dashboard-preview h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-preview p {
+    color: #d7e3f5;
+}
+
+.preview-stat {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #475569;
+    font-weight: bold;
+    color: white;
+}
+
+
+/* =====================================
+   5. ACTIVITY CARDS
+===================================== */
+
+.features {
+    background-color: #f5f7fb;
+    padding: 4rem 0;
+}
+
+.features h2 {
+    margin-bottom: 1.5rem;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.feature-card {
+    position: relative;
+    background-color: white;
+    padding: 2.5rem 1.5rem 2rem;
+    border: 1px solid #e0e5ee;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000008;
+    min-width: 0;
+}
+
+.feature-card:hover {
+    border-color: #1276ad;
+    box-shadow: 0 8px 20px #00000015;
+}
+
+.feature-card h3 {
+    color: #17213d;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+    color: #52627a;
+}
+
+.card-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: #1276ad;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+
+/* =====================================
+   6. FESTIVAL INFORMATION
+===================================== */
+
+.details {
+    background-color: white;
+    padding: 4rem 0;
+}
+
+.details h2 {
+    margin-bottom: 1.5rem;
+}
+
+.details p {
+    margin-bottom: 1rem;
+}
+
+.long-panel {
+    max-height: 8rem;
+    overflow-y: auto;
+    overflow-wrap: anywhere;
+    padding: 1rem;
+    background-color: #f5f7fb;
+    border: 1px solid #e0e5ee;
+    border-radius: 8px;
+}
+
+.long-panel p {
+    margin-bottom: 0;
+}
+
+.code-example {
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: #17213d;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-family: monospace;
+    white-space: pre;
+}
+
+
+/* =====================================
+   7. REGISTRATION SECTION
+===================================== */
+
+.register {
+    padding: 4rem 0;
+}
+
+.register h2 {
+    color: #17213d;
+    margin-bottom: 1rem;
+}
+
+.register p {
+    margin-bottom: 1.5rem;
+}
+
+.hidden-message {
+    display: none;
+}
+
+
+/* =====================================
+   8. FOOTER
+===================================== */
+
+.site-footer {
+    background-color: #17213d;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+
+/* =====================================
+   9. BACK TO TOP BUTTON
+===================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 20;
+    background-color: #1276ad;
+    color: white;
+    text-decoration: none;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #00000025;
+}
+
+.back-to-top:hover {
+    background-color: #095783;
+}
+
+
+/* =====================================
+   10. TABLET RESPONSIVENESS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .hero-copy h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-layout {
+        gap: 2rem;
+    }
+
+    .card-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =====================================
+   11. MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 760px) {
+
+    /* Mobile navigation */
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid #e0e5ee;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px #00000015;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 0.75rem;
+    }
+
+    /* Mobile hero */
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .hero-layout {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+    }
+
+    .hero-copy,
+    .dashboard-preview {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-copy h1 {
+        font-size: 2rem;
+    }
+
+    .hero-copy p {
+        font-size: 1rem;
+    }
+
+    .dashboard-preview {
+        padding: 1.5rem;
+    }
+
+    .dashboard-preview h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Mobile activity cards */
+
+    .features {
+        padding: 3rem 0;
+    }
+
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Other sections */
+
+    .details,
+    .register {
+        padding: 3rem 0;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
